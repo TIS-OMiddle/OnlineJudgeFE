@@ -54,7 +54,9 @@ module.exports = {
     modules: ['node_modules'],
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      'vue$': process.env.NODE_ENV === 'production'
+        ? 'vue/dist/vue.esm.js'
+        : 'vue',
       '@': resolve('src'),
       '@oj': resolve('src/pages/oj'),
       '@admin': resolve('src/pages/admin'),

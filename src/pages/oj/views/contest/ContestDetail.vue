@@ -215,6 +215,7 @@
       flex: none;
       width: 210px;
       margin-left: 20px;
+      cursor: pointer;
     }
     .contest-password {
       margin-top: 20px;

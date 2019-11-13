@@ -1,5 +1,5 @@
 <template>
-  <div id="header">
+  <div id="header" class="no-print">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
       <div class="logo"><span>{{website.website_name}}</span></div>
       <Menu-item name="/">

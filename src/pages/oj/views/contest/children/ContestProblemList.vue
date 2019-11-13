@@ -3,11 +3,13 @@
     <Panel>
       <div slot="title">{{$t('m.Problems_List')}}</div>
       <Table v-if="contestRuleType == 'ACM' || OIContestRealTimePermission"
+            class="table"
              :columns="ACMTableColumns"
              :data="problems"
              @on-row-click="goContestProblem"
              :no-data-text="$t('m.No_Problems')"></Table>
       <Table v-else
+              class="table"
              :data="problems"
              :columns="OITableColumns"
              @on-row-click="goContestProblem"
@@ -95,4 +97,7 @@
 </script>
 
 <style scoped lang="less">
+.table {
+  cursor: pointer;
+}
 </style>

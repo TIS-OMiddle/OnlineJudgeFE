@@ -100,4 +100,12 @@ a.emphasis{
   }
 }
 
-
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  @page{
+    size: auto;
+    margin: 0;
+  }
+}

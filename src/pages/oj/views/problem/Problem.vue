@@ -49,7 +49,7 @@
         </div>
       </Panel>
       <!--problem main end-->
-      <Card :padding="20" id="submit-code" dis-hover>
+      <Card class="no-print" :padding="20" id="submit-code" dis-hover>
         <CodeMirror :value.sync="code"
                     :languages="problem.languages"
                     :language="language"
@@ -101,7 +101,7 @@
       </Card>
     </div>
 
-    <div id="right-column">
+    <div id="right-column" class="no-print">
       <VerticalMenu @on-click="handleRoute">
         <template v-if="this.contestID">
           <VerticalMenu-item :route="{name: 'contest-problem-list', params: {contestID: contestID}}">
