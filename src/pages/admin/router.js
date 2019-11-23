@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
   mode: 'history',
-  base: '/admin/',
+  base: '/training/admin/',
   scrollBehavior: () => ({y: 0}),
   routes: [
     {
