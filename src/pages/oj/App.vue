@@ -77,7 +77,6 @@
     margin-top: 80px;
     padding: 0 2%;
     @media print {
-      margin-top: 20px;
       padding-right: 0;
     }
   }

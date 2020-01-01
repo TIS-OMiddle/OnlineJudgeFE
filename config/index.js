@@ -2,7 +2,7 @@
 // Template version: 1.1.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 
-// process.env.TARGET='http://localhost:8000/'
+process.env.TARGET='http://icpc.scnu.edu.cn/'
 const path = require('path')
 const commonProxy = {
   onProxyReq: (proxyReq, req, res) => {
@@ -42,8 +42,8 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "/api": commonProxy,
-      "/public": commonProxy
+      "/training/api": commonProxy,
+      "/training/public": commonProxy
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README

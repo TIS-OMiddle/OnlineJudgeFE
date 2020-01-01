@@ -1,10 +1,10 @@
 <template>
   <Row type="flex" :gutter="18">
-    <Col :span=19>
+    <Col :span="isAdminRole ? 19 : 24">
     <Panel shadow>
       <div slot="title">{{$t('m.Problem_List')}}</div>
       <div slot="extra">
-        <ul class="filter">
+        <ul class="filter" v-if="isAdminRole">
           <li>
             <Dropdown @on-click="filterByDifficulty">
               <span>{{query.difficulty === '' ? this.$i18n.t('m.Difficulty') : this.$i18n.t('m.' + query.difficulty)}}
@@ -49,7 +49,7 @@
 
     </Col>
 
-    <Col :span="5">
+    <Col :span="5" v-if="isAdminRole">
     <Panel :padding="10">
       <div slot="title" class="taglist-title">{{$t('m.Tags')}}</div>
       <Button v-for="tag in tagList"
@@ -267,7 +267,7 @@
       }
     },
     computed: {
-      ...mapGetters(['isAuthenticated'])
+      ...mapGetters(['isAuthenticated', 'isAdminRole'])
     },
     watch: {
       '$route' (newVal, oldVal) {

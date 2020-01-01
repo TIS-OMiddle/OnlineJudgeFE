@@ -2,10 +2,10 @@
   <div id="header" class="no-print">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
       <div class="logo"><span>{{website.website_name}}</span></div>
-      <Menu-item name="/">
+      <!-- <Menu-item name="/">
         <Icon type="home"></Icon>
         {{$t('m.Home')}}
-      </Menu-item>
+      </Menu-item> -->
       <Menu-item name="/problems">
         <Icon type="ios-keypad"></Icon>
         {{$t('m.NavProblems')}}

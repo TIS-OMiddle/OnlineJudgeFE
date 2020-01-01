@@ -5,7 +5,6 @@ import {
   Announcements,
   ApplyResetPassword,
   FAQ,
-  Home,
   Logout,
   NotFound,
   OIRank,
@@ -21,11 +20,15 @@ import * as Contest from '@oj/views/contest'
 import * as Setting from '@oj/views/setting'
 
 export default [
+  // {
+  //   name: 'home',
+  //   path: '/',
+  //   meta: {title: 'Home'},
+  //   component: Home
+  // },
   {
-    name: 'home',
     path: '/',
-    meta: {title: 'Home'},
-    component: Home
+    redirect: '/problems'
   },
   {
     name: 'logout',
