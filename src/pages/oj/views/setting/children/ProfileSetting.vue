@@ -75,6 +75,12 @@
           <Form-item label="Major">
             <Input v-model="formProfile.major"/>
           </Form-item>
+          <Form-item label="Student ID">
+            <Input v-model="formProfile.student_id"/>
+          </Form-item>
+          <Form-item label="Class">
+            <Input v-model="formProfile.class"/>
+          </Form-item>
           <FormItem label="Language">
             <Select v-model="formProfile.language">
               <Option v-for="lang in languages" :key="lang.value" :value="lang.value">{{lang.label}}</Option>
@@ -94,6 +100,9 @@
           </Form-item>
           <Form-item label="Github">
             <Input v-model="formProfile.github"/>
+          </Form-item>
+          <Form-item label="Year">
+            <Input v-model="formProfile.year"/>
           </Form-item>
         </Col>
       </Row>
@@ -132,6 +141,9 @@
           blog: '',
           school: '',
           github: '',
+          student_id: '',
+          year: '',
+          class: '',
           language: ''
         }
       }

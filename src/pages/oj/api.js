@@ -46,9 +46,23 @@ export default {
       params: {
         username
       }
+    }).then(res => {
+      // deadline incoming!! change this in future!!
+      let data = res.data.data || {}
+      if (data.extend) {
+        Object.assign(data, JSON.parse(data.extend))
+      }
+      return res
     })
   },
   updateProfile (profile) {
+    // deadline incoming!! change this in future!!
+    let extend = {}
+    // this list should be same with v-model in src/pages/oj/views/setting/children/ProfileSetting.vue
+    extend.student_id = profile.student_id
+    extend.year = profile.year
+    extend.class = profile.class
+    profile.extend = JSON.stringify(extend)
     return ajax('profile', 'put', {
       data: profile
     })
